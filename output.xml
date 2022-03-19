@@ -1,0 +1,3014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220319 23:25:19.946" rpa="false" schemaversion="2">
+<suite id="s1" name="Integration" source="/home/amirul/Documents/BeSquare/00_FinalProject/Cryptonite_QA/integration.robot">
+<test id="s1-t1" name="Open Website">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220319 23:25:20.043" level="INFO">Opening browser 'chrome' to base url 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:25:20.043" endtime="20220319 23:25:21.623"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220319 23:25:21.623" endtime="20220319 23:25:21.812"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:20.042" endtime="20220319 23:25:21.813"/>
+</test>
+<test id="s1-t2" name="Integration Testing - Header Component">
+<kw name="Check header component" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:25:21.815" endtime="20220319 23:25:21.840"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:25:21.863" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:25:21.841" endtime="20220319 23:25:21.863"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${crypto_header}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:25:21.890" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/h6[1]'.</msg>
+<status status="PASS" starttime="20220319 23:25:21.864" endtime="20220319 23:25:21.890"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${forex_header}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:25:21.903" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/h6[2]'.</msg>
+<status status="PASS" starttime="20220319 23:25:21.890" endtime="20220319 23:25:21.904"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${aboutUs_header}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:25:21.914" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/h6[3]'.</msg>
+<status status="PASS" starttime="20220319 23:25:21.904" endtime="20220319 23:25:21.914"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${help_header}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:25:21.926" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/h6[4]'.</msg>
+<status status="PASS" starttime="20220319 23:25:21.914" endtime="20220319 23:25:21.927"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${currency_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:25:21.938" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20220319 23:25:21.927" endtime="20220319 23:25:21.939"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:25:21.957" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[2]'.</msg>
+<status status="PASS" starttime="20220319 23:25:21.939" endtime="20220319 23:25:21.957"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:23.958" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:21.957" endtime="20220319 23:25:23.958"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:21.815" endtime="20220319 23:25:23.958"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:25.960" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:23.959" endtime="20220319 23:25:25.960"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:25:25.962" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:25:25.961" endtime="20220319 23:25:25.971"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:27.972" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:25.971" endtime="20220319 23:25:27.972"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:25:27.972" endtime="20220319 23:25:27.985"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:25:27.986" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:25:27.985" endtime="20220319 23:25:28.065"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:25:28.068" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:25:28.065" endtime="20220319 23:25:28.068"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:30.069" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:28.068" endtime="20220319 23:25:30.069"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:23.959" endtime="20220319 23:25:30.069"/>
+</kw>
+<kw name="Click on the Logo and Navigate to Homepage" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:25:30.070" endtime="20220319 23:25:30.082"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:25:30.083" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:25:30.082" endtime="20220319 23:25:30.145"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:25:30.149" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:25:30.145" endtime="20220319 23:25:30.150"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:32.150" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:30.150" endtime="20220319 23:25:32.151"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:30.070" endtime="20220319 23:25:32.151"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:34.152" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:32.152" endtime="20220319 23:25:34.153"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:25:34.154" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:25:34.153" endtime="20220319 23:25:34.161"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:36.162" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:34.161" endtime="20220319 23:25:36.162"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:25:36.162" endtime="20220319 23:25:36.176"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:25:36.177" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:25:36.176" endtime="20220319 23:25:36.243"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:25:36.246" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:25:36.244" endtime="20220319 23:25:36.246"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:38.246" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:36.246" endtime="20220319 23:25:38.247"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:32.151" endtime="20220319 23:25:38.247"/>
+</kw>
+<kw name="Click on the Crypto text and Navigate to Crypto Page" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:25:38.248" endtime="20220319 23:25:38.262"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${crypto_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:25:38.263" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/h6[1]'.</msg>
+<status status="PASS" starttime="20220319 23:25:38.262" endtime="20220319 23:25:38.356"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/crypto</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:25:38.418" level="INFO">Current location is 'https://cryptonite5.netlify.app/crypto'.</msg>
+<status status="PASS" starttime="20220319 23:25:38.357" endtime="20220319 23:25:38.418"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:40.419" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:38.418" endtime="20220319 23:25:40.419"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:38.247" endtime="20220319 23:25:40.419"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:42.421" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:40.420" endtime="20220319 23:25:42.421"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:25:42.422" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:25:42.421" endtime="20220319 23:25:42.430"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:44.431" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:42.430" endtime="20220319 23:25:44.431"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:25:44.431" endtime="20220319 23:25:44.444"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:25:44.445" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:25:44.444" endtime="20220319 23:25:44.539"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:25:44.611" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:25:44.539" endtime="20220319 23:25:44.611"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:46.612" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:44.611" endtime="20220319 23:25:46.612"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:40.420" endtime="20220319 23:25:46.612"/>
+</kw>
+<kw name="Click on the Crypto text and Navigate to Forex Page" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:25:46.613" endtime="20220319 23:25:46.627"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${forex_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:25:46.628" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/h6[2]'.</msg>
+<status status="PASS" starttime="20220319 23:25:46.627" endtime="20220319 23:25:46.696"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/forex</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:25:46.704" level="INFO">Current location is 'https://cryptonite5.netlify.app/forex'.</msg>
+<status status="PASS" starttime="20220319 23:25:46.696" endtime="20220319 23:25:46.704"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:48.704" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:46.704" endtime="20220319 23:25:48.705"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:46.613" endtime="20220319 23:25:48.705"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:50.707" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:48.706" endtime="20220319 23:25:50.707"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:25:50.708" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:25:50.708" endtime="20220319 23:25:50.716"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:52.716" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:50.716" endtime="20220319 23:25:52.717"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:25:52.717" endtime="20220319 23:25:52.730"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:25:52.731" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:25:52.730" endtime="20220319 23:25:52.796"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:25:52.830" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:25:52.796" endtime="20220319 23:25:52.830"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:54.830" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:52.830" endtime="20220319 23:25:54.830"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:48.705" endtime="20220319 23:25:54.831"/>
+</kw>
+<kw name="Click on the Crypto text and Navigate to About Us Page" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:25:54.832" endtime="20220319 23:25:54.848"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${aboutUs_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:25:54.849" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/h6[3]'.</msg>
+<status status="PASS" starttime="20220319 23:25:54.848" endtime="20220319 23:25:54.933"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/about</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:25:54.943" level="INFO">Current location is 'https://cryptonite5.netlify.app/about'.</msg>
+<status status="PASS" starttime="20220319 23:25:54.934" endtime="20220319 23:25:54.943"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:56.944" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:54.944" endtime="20220319 23:25:56.944"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:54.831" endtime="20220319 23:25:56.944"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:25:58.946" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:56.945" endtime="20220319 23:25:58.946"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:25:58.947" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:25:58.947" endtime="20220319 23:25:58.954"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:00.955" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:25:58.955" endtime="20220319 23:26:00.955"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:00.956" endtime="20220319 23:26:00.969"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:00.970" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:26:00.969" endtime="20220319 23:26:01.074"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:26:01.109" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:26:01.074" endtime="20220319 23:26:01.109"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:03.110" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:01.109" endtime="20220319 23:26:03.110"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:56.945" endtime="20220319 23:26:03.110"/>
+</kw>
+<kw name="Click on the Crypto text and Navigate to Help Page" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:03.111" endtime="20220319 23:26:03.125"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${help_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:03.126" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/h6[4]'.</msg>
+<status status="PASS" starttime="20220319 23:26:03.126" endtime="20220319 23:26:03.244"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/help</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:26:03.261" level="INFO">Current location is 'https://cryptonite5.netlify.app/help'.</msg>
+<status status="PASS" starttime="20220319 23:26:03.244" endtime="20220319 23:26:03.261"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:05.262" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:03.261" endtime="20220319 23:26:05.262"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:03.111" endtime="20220319 23:26:05.262"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:07.264" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:05.263" endtime="20220319 23:26:07.264"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:26:07.266" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:26:07.265" endtime="20220319 23:26:07.273"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:09.273" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:07.273" endtime="20220319 23:26:09.274"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:09.275" endtime="20220319 23:26:09.289"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:09.289" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:26:09.289" endtime="20220319 23:26:09.376"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:26:09.448" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:26:09.377" endtime="20220319 23:26:09.448"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:11.450" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:09.449" endtime="20220319 23:26:11.450"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:05.263" endtime="20220319 23:26:11.451"/>
+</kw>
+<kw name="Click on the login button" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:11.452" endtime="20220319 23:26:11.466"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:11.466" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[2]'.</msg>
+<status status="PASS" starttime="20220319 23:26:11.466" endtime="20220319 23:26:11.541"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:13.541" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:11.541" endtime="20220319 23:26:13.542"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${log_sign_tab}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:13.542" endtime="20220319 23:26:13.558"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${log_sign_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:13.566" level="INFO">Current page contains element '//*[@class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"]'.</msg>
+<status status="PASS" starttime="20220319 23:26:13.558" endtime="20220319 23:26:13.566"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:15.566" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:13.566" endtime="20220319 23:26:15.566"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:11.451" endtime="20220319 23:26:15.567"/>
+</kw>
+<kw name="Click on the login tab" library="header_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:15.589" level="INFO">Current page contains element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:26:15.568" endtime="20220319 23:26:15.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:15.590" level="INFO">Clicking element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:26:15.590" endtime="20220319 23:26:15.620"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:17.620" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:15.620" endtime="20220319 23:26:17.621"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Enter Email"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:17.639" level="INFO">Current page contains element '//*[text()="Enter Email"]'.</msg>
+<status status="PASS" starttime="20220319 23:26:17.621" endtime="20220319 23:26:17.640"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Enter Your Password"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:17.648" level="INFO">Current page contains element '//*[text()="Enter Your Password"]'.</msg>
+<status status="PASS" starttime="20220319 23:26:17.640" endtime="20220319 23:26:17.648"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Login" and contains (@class, "MuiButton-label")] //parent::button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:17.657" level="INFO">Current page contains element '//*[text()="Login" and contains (@class, "MuiButton-label")] //parent::button'.</msg>
+<status status="PASS" starttime="20220319 23:26:17.648" endtime="20220319 23:26:17.657"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:19.657" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:17.657" endtime="20220319 23:26:19.657"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:15.567" endtime="20220319 23:26:19.658"/>
+</kw>
+<kw name="Login and check header component" library="header_test">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:19.659" level="INFO">Clicking element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:26:19.659" endtime="20220319 23:26:19.698"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:19.699" level="INFO">Clicking element '//*[@type="email" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:26:19.699" endtime="20220319 23:26:19.746"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<arg>${test_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:19.747" level="INFO">Typing text 'emailtest@test.com.my' into text field '//*[@type="email" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:26:19.746" endtime="20220319 23:26:19.823"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pswd_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:19.824" level="INFO">Clicking element '//*[@type="password" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:26:19.823" endtime="20220319 23:26:19.858"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pswd_field}</arg>
+<arg>${test_pswd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:19.858" level="INFO">Typing text 'abc123' into text field '//*[@type="password" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:26:19.858" endtime="20220319 23:26:19.913"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:21.914" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:19.913" endtime="20220319 23:26:21.914"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:21.914" level="INFO">Clicking element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSizeLarge MuiButton-sizeLarge")]'.</msg>
+<status status="PASS" starttime="20220319 23:26:21.914" endtime="20220319 23:26:21.953"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:31.954" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:21.953" endtime="20220319 23:26:31.954"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:31.982" level="INFO">Current page contains element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:26:31.954" endtime="20220319 23:26:31.982"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${currency_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:31.999" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20220319 23:26:31.983" endtime="20220319 23:26:31.999"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:19.658" endtime="20220319 23:26:31.999"/>
+</kw>
+<kw name="Click User Avatar and sidebar should appear" library="sidebar_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:32.000" endtime="20220319 23:26:32.010"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:32.018" level="INFO">Current page contains element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:26:32.010" endtime="20220319 23:26:32.018"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:32.018" level="INFO">Clicking element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:26:32.018" endtime="20220319 23:26:32.062"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:34.063" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:32.062" endtime="20220319 23:26:34.063"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${sb}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:34.084" level="INFO">Current page contains element '//*[@class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorRight MuiPaper-elevation16"]'.</msg>
+<status status="PASS" starttime="20220319 23:26:34.063" endtime="20220319 23:26:34.084"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:36.085" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:34.084" endtime="20220319 23:26:36.085"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:31.999" endtime="20220319 23:26:36.086"/>
+</kw>
+<kw name="Click logout and check header component" library="sidebar_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${logout_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:36.107" level="INFO">Current page contains element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained")]'.</msg>
+<status status="PASS" starttime="20220319 23:26:36.087" endtime="20220319 23:26:36.107"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logout_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:36.108" level="INFO">Clicking element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained")]'.</msg>
+<status status="PASS" starttime="20220319 23:26:36.108" endtime="20220319 23:26:36.188"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:38.189" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:36.188" endtime="20220319 23:26:38.189"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:38.189" endtime="20220319 23:26:38.212"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220319 23:26:38.223" level="INFO">Current page does not contain element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:26:38.212" endtime="20220319 23:26:38.223"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${currency_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:38.234" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20220319 23:26:38.223" endtime="20220319 23:26:38.234"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:26:38.251" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[2]'.</msg>
+<status status="PASS" starttime="20220319 23:26:38.234" endtime="20220319 23:26:38.251"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:36.086" endtime="20220319 23:26:38.251"/>
+</kw>
+<status status="PASS" starttime="20220319 23:25:21.814" endtime="20220319 23:26:38.252"/>
+</test>
+<test id="s1-t3" name="Integration Testing - Footer Component">
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:40.253" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:38.253" endtime="20220319 23:26:40.254"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:26:40.255" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:26:40.254" endtime="20220319 23:26:40.264"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:42.265" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:40.264" endtime="20220319 23:26:42.265"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:42.265" endtime="20220319 23:26:42.279"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:42.279" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:26:42.279" endtime="20220319 23:26:42.332"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:26:42.336" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:26:42.333" endtime="20220319 23:26:42.336"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:44.337" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:42.336" endtime="20220319 23:26:44.337"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:38.253" endtime="20220319 23:26:44.337"/>
+</kw>
+<kw name="Click on the Footer logo and Navigate to Homepage" library="footer_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:44.337" endtime="20220319 23:26:44.347"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:46.348" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:44.347" endtime="20220319 23:26:46.348"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:26:46.349" level="INFO">Executing JavaScript:
+window.scrollTo(0,2000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:26:46.348" endtime="20220319 23:26:46.358"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:48.358" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:46.358" endtime="20220319 23:26:48.359"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${logo_footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:48.359" endtime="20220319 23:26:48.367"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_footer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:48.367" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[2]/div/div[1]/div[1]/img'.</msg>
+<status status="PASS" starttime="20220319 23:26:48.367" endtime="20220319 23:26:48.416"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:26:48.419" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:26:48.416" endtime="20220319 23:26:48.419"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:50.420" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:48.420" endtime="20220319 23:26:50.420"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:44.337" endtime="20220319 23:26:50.420"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:52.421" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:50.421" endtime="20220319 23:26:52.421"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:26:52.421" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:26:52.421" endtime="20220319 23:26:52.425"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:54.425" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:52.425" endtime="20220319 23:26:54.425"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:54.426" endtime="20220319 23:26:54.439"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:26:54.440" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:26:54.439" endtime="20220319 23:26:54.511"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:26:54.515" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:26:54.511" endtime="20220319 23:26:54.515"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:56.515" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:54.515" endtime="20220319 23:26:56.516"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:50.420" endtime="20220319 23:26:56.516"/>
+</kw>
+<kw name="Click on the About Us text on the Footer and Navigate to About Us page" library="footer_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:26:56.517" endtime="20220319 23:26:56.531"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:26:58.532" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:56.532" endtime="20220319 23:26:58.532"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:26:58.534" level="INFO">Executing JavaScript:
+window.scrollTo(0,2000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:26:58.533" endtime="20220319 23:26:58.540"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:00.541" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:26:58.541" endtime="20220319 23:27:00.542"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${about_footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:00.542" endtime="20220319 23:27:00.563"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${about_footer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:27:00.564" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[2]/div/div[1]/div[2]/div[1]/p[1]'.</msg>
+<status status="PASS" starttime="20220319 23:27:00.563" endtime="20220319 23:27:00.633"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/about</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:27:00.636" level="INFO">Current location is 'https://cryptonite5.netlify.app/about'.</msg>
+<status status="PASS" starttime="20220319 23:27:00.633" endtime="20220319 23:27:00.636"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:02.636" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:00.636" endtime="20220319 23:27:02.637"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:56.516" endtime="20220319 23:27:02.638"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:04.639" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:02.638" endtime="20220319 23:27:04.639"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:27:04.640" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:27:04.639" endtime="20220319 23:27:04.643"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:06.644" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:04.643" endtime="20220319 23:27:06.644"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:06.645" endtime="20220319 23:27:06.658"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:27:06.659" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:27:06.659" endtime="20220319 23:27:06.791"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:27:06.798" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:27:06.791" endtime="20220319 23:27:06.798"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:08.799" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:06.799" endtime="20220319 23:27:08.800"/>
+</kw>
+<status status="PASS" starttime="20220319 23:27:02.638" endtime="20220319 23:27:08.800"/>
+</kw>
+<kw name="Click on the Contact Us text on the Footer and Navigate to Help page" library="footer_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:08.801" endtime="20220319 23:27:08.818"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:10.819" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:08.818" endtime="20220319 23:27:10.819"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:27:10.821" level="INFO">Executing JavaScript:
+window.scrollTo(0,2000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:27:10.820" endtime="20220319 23:27:10.827"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:12.828" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:10.828" endtime="20220319 23:27:12.829"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${contact_footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:12.829" endtime="20220319 23:27:12.848"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${contact_footer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:27:12.849" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[2]/div/div[1]/div[2]/div[1]/p[2]'.</msg>
+<status status="PASS" starttime="20220319 23:27:12.848" endtime="20220319 23:27:12.953"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/help</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:27:12.969" level="INFO">Current location is 'https://cryptonite5.netlify.app/help'.</msg>
+<status status="PASS" starttime="20220319 23:27:12.953" endtime="20220319 23:27:12.969"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:14.970" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:12.969" endtime="20220319 23:27:14.970"/>
+</kw>
+<status status="PASS" starttime="20220319 23:27:08.800" endtime="20220319 23:27:14.971"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:16.972" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:14.972" endtime="20220319 23:27:16.972"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:27:16.973" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:27:16.972" endtime="20220319 23:27:16.976"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:18.976" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:16.976" endtime="20220319 23:27:18.976"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:18.977" endtime="20220319 23:27:18.990"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:27:18.991" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:27:18.990" endtime="20220319 23:27:19.113"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:27:19.177" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:27:19.113" endtime="20220319 23:27:19.177"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:21.178" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:19.177" endtime="20220319 23:27:21.178"/>
+</kw>
+<status status="PASS" starttime="20220319 23:27:14.971" endtime="20220319 23:27:21.179"/>
+</kw>
+<kw name="Click on the Help text on the Footer and Navigate to Help page" library="footer_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:21.180" endtime="20220319 23:27:21.194"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:23.195" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:21.194" endtime="20220319 23:27:23.195"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:27:23.196" level="INFO">Executing JavaScript:
+window.scrollTo(0,2000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:27:23.195" endtime="20220319 23:27:23.204"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:25.205" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:23.204" endtime="20220319 23:27:25.205"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${help_footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:25.205" endtime="20220319 23:27:25.222"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${help_footer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:27:25.222" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[2]/div/div[1]/div[2]/div[1]/p[3]'.</msg>
+<status status="PASS" starttime="20220319 23:27:25.222" endtime="20220319 23:27:25.311"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/help</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:27:25.319" level="INFO">Current location is 'https://cryptonite5.netlify.app/help'.</msg>
+<status status="PASS" starttime="20220319 23:27:25.312" endtime="20220319 23:27:25.319"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:27.320" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:25.320" endtime="20220319 23:27:27.320"/>
+</kw>
+<status status="PASS" starttime="20220319 23:27:21.179" endtime="20220319 23:27:27.320"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:29.322" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:27.321" endtime="20220319 23:27:29.322"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:27:29.323" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:27:29.322" endtime="20220319 23:27:29.331"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:31.332" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:29.332" endtime="20220319 23:27:31.332"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:31.333" endtime="20220319 23:27:31.349"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:27:31.349" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:27:31.349" endtime="20220319 23:27:31.440"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:27:31.505" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:27:31.441" endtime="20220319 23:27:31.506"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:33.506" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:31.506" endtime="20220319 23:27:33.507"/>
+</kw>
+<status status="PASS" starttime="20220319 23:27:27.321" endtime="20220319 23:27:33.507"/>
+</kw>
+<kw name="Click on the Search Cryptocurrency text on the Footer and Navigate to Crypto page" library="footer_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:33.508" endtime="20220319 23:27:33.530"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:35.531" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:33.531" endtime="20220319 23:27:35.531"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:27:35.532" level="INFO">Executing JavaScript:
+window.scrollTo(0,2000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:27:35.532" endtime="20220319 23:27:35.539"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:37.541" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:35.540" endtime="20220319 23:27:37.541"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${search_footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:37.542" endtime="20220319 23:27:37.562"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_footer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:27:37.563" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[2]/div/div[1]/div[2]/div[2]/p[1]'.</msg>
+<status status="PASS" starttime="20220319 23:27:37.562" endtime="20220319 23:27:37.669"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/crypto</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:27:37.713" level="INFO">Current location is 'https://cryptonite5.netlify.app/crypto'.</msg>
+<status status="PASS" starttime="20220319 23:27:37.669" endtime="20220319 23:27:37.713"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:39.714" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:37.714" endtime="20220319 23:27:39.715"/>
+</kw>
+<status status="PASS" starttime="20220319 23:27:33.507" endtime="20220319 23:27:39.715"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:41.715" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:39.715" endtime="20220319 23:27:41.716"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:27:41.717" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:27:41.716" endtime="20220319 23:27:41.723"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:43.724" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:41.724" endtime="20220319 23:27:43.725"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:43.725" endtime="20220319 23:27:43.738"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:27:43.739" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:27:43.738" endtime="20220319 23:27:43.851"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:27:43.870" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:27:43.851" endtime="20220319 23:27:43.871"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:45.871" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:43.871" endtime="20220319 23:27:45.871"/>
+</kw>
+<status status="PASS" starttime="20220319 23:27:39.715" endtime="20220319 23:27:45.872"/>
+</kw>
+<kw name="Click on the Trending Market text on the Footer and Navigate to Homepage" library="footer_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:45.873" endtime="20220319 23:27:45.890"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:47.891" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:45.890" endtime="20220319 23:27:47.891"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:27:47.892" level="INFO">Executing JavaScript:
+window.scrollTo(0,2000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:27:47.891" endtime="20220319 23:27:47.899"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:49.900" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:47.899" endtime="20220319 23:27:49.900"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${trending_footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:49.901" endtime="20220319 23:27:49.922"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${trending_footer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:27:49.923" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[2]/div/div[1]/div[2]/div[2]/p[2]'.</msg>
+<status status="PASS" starttime="20220319 23:27:49.922" endtime="20220319 23:27:49.984"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:27:49.988" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:27:49.984" endtime="20220319 23:27:49.989"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:51.989" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:49.989" endtime="20220319 23:27:51.989"/>
+</kw>
+<status status="PASS" starttime="20220319 23:27:45.872" endtime="20220319 23:27:51.990"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:53.992" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:51.991" endtime="20220319 23:27:53.992"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:27:53.993" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:27:53.992" endtime="20220319 23:27:53.999"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:56.000" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:53.999" endtime="20220319 23:27:56.000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:56.001" endtime="20220319 23:27:56.016"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:27:56.017" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:27:56.016" endtime="20220319 23:27:56.087"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:27:56.091" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:27:56.088" endtime="20220319 23:27:56.091"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:27:58.091" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:56.091" endtime="20220319 23:27:58.091"/>
+</kw>
+<status status="PASS" starttime="20220319 23:27:51.991" endtime="20220319 23:27:58.091"/>
+</kw>
+<kw name="Click on the Promotional text on the Footer and Navigate to Landing page" library="footer_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:27:58.092" endtime="20220319 23:27:58.098"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:00.099" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:27:58.098" endtime="20220319 23:28:00.099"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:28:00.100" level="INFO">Executing JavaScript:
+window.scrollTo(0,2000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:28:00.099" endtime="20220319 23:28:00.107"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:02.108" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:00.107" endtime="20220319 23:28:02.108"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${promo_footer}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:28:02.109" endtime="20220319 23:28:02.129"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${promo_footer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:02.130" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[2]/div/div[1]/div[2]/div[2]/p[3]'.</msg>
+<status status="PASS" starttime="20220319 23:28:02.130" endtime="20220319 23:28:02.190"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/landing</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:28:02.202" level="INFO">Current location is 'https://cryptonite5.netlify.app/landing'.</msg>
+<status status="PASS" starttime="20220319 23:28:02.191" endtime="20220319 23:28:02.202"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:04.203" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:02.202" endtime="20220319 23:28:04.203"/>
+</kw>
+<status status="PASS" starttime="20220319 23:27:58.092" endtime="20220319 23:28:04.204"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:06.206" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:04.205" endtime="20220319 23:28:06.206"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:28:06.208" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:28:06.207" endtime="20220319 23:28:06.214"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:08.215" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:06.215" endtime="20220319 23:28:08.215"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:28:08.216" endtime="20220319 23:28:08.228"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:08.229" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:28:08.228" endtime="20220319 23:28:08.346"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:28:08.385" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:28:08.346" endtime="20220319 23:28:08.385"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:10.386" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:08.385" endtime="20220319 23:28:10.386"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:04.204" endtime="20220319 23:28:10.386"/>
+</kw>
+<status status="PASS" starttime="20220319 23:26:38.252" endtime="20220319 23:28:10.387"/>
+</test>
+<test id="s1-t4" name="Integration Testing - Login Component">
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:12.391" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:10.390" endtime="20220319 23:28:12.391"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:28:12.393" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:28:12.392" endtime="20220319 23:28:12.398"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:14.398" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:12.398" endtime="20220319 23:28:14.398"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:28:14.399" endtime="20220319 23:28:14.412"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:14.413" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:28:14.412" endtime="20220319 23:28:14.471"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:28:14.474" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:28:14.472" endtime="20220319 23:28:14.474"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:16.475" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:14.475" endtime="20220319 23:28:16.475"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:10.390" endtime="20220319 23:28:16.476"/>
+</kw>
+<kw name="Click on the login button" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:28:16.476" endtime="20220319 23:28:16.490"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:16.491" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[2]'.</msg>
+<status status="PASS" starttime="20220319 23:28:16.491" endtime="20220319 23:28:16.546"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:18.547" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:16.546" endtime="20220319 23:28:18.547"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${log_sign_tab}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:28:18.547" endtime="20220319 23:28:18.569"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${log_sign_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:18.579" level="INFO">Current page contains element '//*[@class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:18.569" endtime="20220319 23:28:18.579"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:20.580" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:18.579" endtime="20220319 23:28:20.580"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:16.476" endtime="20220319 23:28:20.580"/>
+</kw>
+<kw name="Click on the login tab" library="header_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:20.602" level="INFO">Current page contains element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:20.581" endtime="20220319 23:28:20.603"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:20.604" level="INFO">Clicking element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:20.603" endtime="20220319 23:28:20.635"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:22.636" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:20.636" endtime="20220319 23:28:22.637"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Enter Email"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:22.659" level="INFO">Current page contains element '//*[text()="Enter Email"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:22.637" endtime="20220319 23:28:22.659"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Enter Your Password"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:22.671" level="INFO">Current page contains element '//*[text()="Enter Your Password"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:22.659" endtime="20220319 23:28:22.671"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Login" and contains (@class, "MuiButton-label")] //parent::button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:22.678" level="INFO">Current page contains element '//*[text()="Login" and contains (@class, "MuiButton-label")] //parent::button'.</msg>
+<status status="PASS" starttime="20220319 23:28:22.671" endtime="20220319 23:28:22.678"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:24.678" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:22.678" endtime="20220319 23:28:24.678"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:20.581" endtime="20220319 23:28:24.679"/>
+</kw>
+<kw name="Login and check header component" library="header_test">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:24.681" level="INFO">Clicking element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:24.680" endtime="20220319 23:28:24.711"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:24.711" level="INFO">Clicking element '//*[@type="email" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:24.711" endtime="20220319 23:28:24.754"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<arg>${test_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:24.754" level="INFO">Typing text 'emailtest@test.com.my' into text field '//*[@type="email" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:24.754" endtime="20220319 23:28:24.842"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pswd_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:24.843" level="INFO">Clicking element '//*[@type="password" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:24.842" endtime="20220319 23:28:24.877"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pswd_field}</arg>
+<arg>${test_pswd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:24.877" level="INFO">Typing text 'abc123' into text field '//*[@type="password" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:24.877" endtime="20220319 23:28:24.921"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:26.922" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:24.922" endtime="20220319 23:28:26.922"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:26.923" level="INFO">Clicking element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSizeLarge MuiButton-sizeLarge")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:26.922" endtime="20220319 23:28:26.963"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:36.963" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:26.963" endtime="20220319 23:28:36.964"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:36.982" level="INFO">Current page contains element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:36.964" endtime="20220319 23:28:36.982"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${currency_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:36.990" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20220319 23:28:36.982" endtime="20220319 23:28:36.991"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:24.679" endtime="20220319 23:28:36.991"/>
+</kw>
+<kw name="Click User Avatar and sidebar should appear" library="sidebar_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:28:36.991" endtime="20220319 23:28:36.996"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:37.000" level="INFO">Current page contains element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:36.996" endtime="20220319 23:28:37.001"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:37.001" level="INFO">Clicking element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:37.001" endtime="20220319 23:28:37.033"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:39.034" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:37.033" endtime="20220319 23:28:39.034"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${sb}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:39.042" level="INFO">Current page contains element '//*[@class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorRight MuiPaper-elevation16"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:39.034" endtime="20220319 23:28:39.042"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:41.043" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:39.042" endtime="20220319 23:28:41.043"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:36.991" endtime="20220319 23:28:41.043"/>
+</kw>
+<kw name="Click logout and check header component" library="sidebar_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${logout_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:41.065" level="INFO">Current page contains element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:41.044" endtime="20220319 23:28:41.065"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logout_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:41.067" level="INFO">Clicking element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:41.066" endtime="20220319 23:28:41.134"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:43.136" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:41.135" endtime="20220319 23:28:43.136"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:28:43.136" endtime="20220319 23:28:43.151"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220319 23:28:43.157" level="INFO">Current page does not contain element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:43.151" endtime="20220319 23:28:43.157"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${currency_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:43.163" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20220319 23:28:43.158" endtime="20220319 23:28:43.163"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:43.171" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[2]'.</msg>
+<status status="PASS" starttime="20220319 23:28:43.163" endtime="20220319 23:28:43.171"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:41.044" endtime="20220319 23:28:43.171"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:10.389" endtime="20220319 23:28:43.172"/>
+</test>
+<test id="s1-t5" name="Integration Testing - Sidebar Profile Component">
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:45.173" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:43.173" endtime="20220319 23:28:45.173"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:28:45.174" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:28:45.173" endtime="20220319 23:28:45.178"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:47.178" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:45.178" endtime="20220319 23:28:47.178"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:28:47.179" endtime="20220319 23:28:47.191"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:47.192" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:28:47.192" endtime="20220319 23:28:47.269"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:28:47.272" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:28:47.269" endtime="20220319 23:28:47.272"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:49.273" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:47.273" endtime="20220319 23:28:49.273"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:43.172" endtime="20220319 23:28:49.274"/>
+</kw>
+<kw name="Click on the login button" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:28:49.275" endtime="20220319 23:28:49.288"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:49.289" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[2]'.</msg>
+<status status="PASS" starttime="20220319 23:28:49.289" endtime="20220319 23:28:49.356"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:51.356" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:49.356" endtime="20220319 23:28:51.356"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${log_sign_tab}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:28:51.357" endtime="20220319 23:28:51.379"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${log_sign_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:51.388" level="INFO">Current page contains element '//*[@class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:51.379" endtime="20220319 23:28:51.388"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:53.388" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:51.388" endtime="20220319 23:28:53.389"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:49.274" endtime="20220319 23:28:53.389"/>
+</kw>
+<kw name="Click on the login tab" library="header_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:53.410" level="INFO">Current page contains element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:53.390" endtime="20220319 23:28:53.410"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:53.411" level="INFO">Clicking element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:53.411" endtime="20220319 23:28:53.443"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:55.444" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:53.443" endtime="20220319 23:28:55.444"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Enter Email"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:55.459" level="INFO">Current page contains element '//*[text()="Enter Email"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:55.444" endtime="20220319 23:28:55.460"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Enter Your Password"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:55.473" level="INFO">Current page contains element '//*[text()="Enter Your Password"]'.</msg>
+<status status="PASS" starttime="20220319 23:28:55.460" endtime="20220319 23:28:55.473"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Login" and contains (@class, "MuiButton-label")] //parent::button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:55.484" level="INFO">Current page contains element '//*[text()="Login" and contains (@class, "MuiButton-label")] //parent::button'.</msg>
+<status status="PASS" starttime="20220319 23:28:55.473" endtime="20220319 23:28:55.485"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:57.485" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:55.485" endtime="20220319 23:28:57.485"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:53.390" endtime="20220319 23:28:57.485"/>
+</kw>
+<kw name="Login Account" library="sidebar_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:28:57.493" level="INFO">Current page contains element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:57.487" endtime="20220319 23:28:57.493"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:57.494" level="INFO">Clicking element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:57.493" endtime="20220319 23:28:57.518"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:57.518" level="INFO">Clicking element '//*[@type="email" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:57.518" endtime="20220319 23:28:57.558"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<arg>${test_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:57.559" level="INFO">Typing text 'emailtest@test.com.my' into text field '//*[@type="email" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:57.558" endtime="20220319 23:28:57.635"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pswd_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:57.636" level="INFO">Clicking element '//*[@type="password" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:57.635" endtime="20220319 23:28:57.673"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pswd_field}</arg>
+<arg>${test_pswd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:57.674" level="INFO">Typing text 'abc123' into text field '//*[@type="password" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:57.673" endtime="20220319 23:28:57.717"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:28:59.717" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:57.717" endtime="20220319 23:28:59.717"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:28:59.718" level="INFO">Clicking element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSizeLarge MuiButton-sizeLarge")]'.</msg>
+<status status="PASS" starttime="20220319 23:28:59.718" endtime="20220319 23:28:59.766"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:04.766" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220319 23:28:59.766" endtime="20220319 23:29:04.767"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:57.486" endtime="20220319 23:29:04.767"/>
+</kw>
+<kw name="Click User Avatar and sidebar should appear" library="sidebar_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:29:04.768" endtime="20220319 23:29:04.787"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:04.795" level="INFO">Current page contains element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:04.787" endtime="20220319 23:29:04.795"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:04.796" level="INFO">Clicking element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:04.795" endtime="20220319 23:29:04.836"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:06.837" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:04.836" endtime="20220319 23:29:06.837"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${sb}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:06.851" level="INFO">Current page contains element '//*[@class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorRight MuiPaper-elevation16"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:06.837" endtime="20220319 23:29:06.851"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:08.852" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:06.851" endtime="20220319 23:29:08.852"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:04.767" endtime="20220319 23:29:08.852"/>
+</kw>
+<kw name="Check sidebar component" library="sidebar_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${avatar_sb}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:08.874" level="INFO">Current page contains element '//*[@class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:08.853" endtime="20220319 23:29:08.874"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${logout_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:08.883" level="INFO">Current page contains element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained")]'.</msg>
+<status status="PASS" starttime="20220319 23:29:08.874" endtime="20220319 23:29:08.883"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:10.883" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:08.883" endtime="20220319 23:29:10.884"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:08.853" endtime="20220319 23:29:10.884"/>
+</kw>
+<kw name="Close sidebar" library="sidebar_test">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${backdrop_sb}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:10.886" level="INFO">Clicking element '//*[@class="MuiBackdrop-root"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:10.885" endtime="20220319 23:29:10.934"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:12.934" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:10.934" endtime="20220319 23:29:12.935"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:10.884" endtime="20220319 23:29:12.935"/>
+</kw>
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:14.935" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:12.935" endtime="20220319 23:29:14.936"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:29:14.937" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:29:14.936" endtime="20220319 23:29:14.945"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:16.946" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:14.945" endtime="20220319 23:29:16.946"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:29:16.946" endtime="20220319 23:29:16.959"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:16.960" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:29:16.959" endtime="20220319 23:29:17.024"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:29:17.029" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:29:17.024" endtime="20220319 23:29:17.029"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:19.030" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:17.029" endtime="20220319 23:29:19.030"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:12.935" endtime="20220319 23:29:19.030"/>
+</kw>
+<kw name="Click on the Crypto text and Navigate to Crypto Page" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:29:19.031" endtime="20220319 23:29:19.044"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${crypto_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:19.045" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/h6[1]'.</msg>
+<status status="PASS" starttime="20220319 23:29:19.044" endtime="20220319 23:29:19.151"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/crypto</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:29:19.157" level="INFO">Current location is 'https://cryptonite5.netlify.app/crypto'.</msg>
+<status status="PASS" starttime="20220319 23:29:19.151" endtime="20220319 23:29:19.158"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:21.158" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:19.158" endtime="20220319 23:29:21.159"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:19.031" endtime="20220319 23:29:21.159"/>
+</kw>
+<kw name="Click the coin in the table and navigate to respective coin page from Crypto" library="crypto_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:23.160" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:21.160" endtime="20220319 23:29:23.161"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:29:23.161" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:29:23.161" endtime="20220319 23:29:23.172"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:25.173" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:23.173" endtime="20220319 23:29:25.173"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${table_row1_cr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:25.175" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[1]/div[3]/div[2]/table/tbody/tr[1]/th/div[2]/span[1]'.</msg>
+<status status="PASS" starttime="20220319 23:29:25.174" endtime="20220319 23:29:25.246"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:27.246" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:25.246" endtime="20220319 23:29:27.246"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/coins/bitcoin</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:29:27.250" level="INFO">Current location is 'https://cryptonite5.netlify.app/coins/bitcoin'.</msg>
+<status status="PASS" starttime="20220319 23:29:27.247" endtime="20220319 23:29:27.250"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:32.250" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:27.250" endtime="20220319 23:29:32.250"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:21.159" endtime="20220319 23:29:32.251"/>
+</kw>
+<kw name="Logged in and check page component" library="coin_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${fav_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:32.273" level="INFO">Current page contains element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-outlined")]'.</msg>
+<status status="PASS" starttime="20220319 23:29:32.252" endtime="20220319 23:29:32.273"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:32.251" endtime="20220319 23:29:32.273"/>
+</kw>
+<kw name="Click Add to Favourite button and check the component" library="coin_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:34.274" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:32.274" endtime="20220319 23:29:34.275"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${green_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:34.296" level="INFO">Current page contains element '//*[@type="button" and contains (@style, "background-color: rgb(73, 255, 0)")]'.</msg>
+<status status="PASS" starttime="20220319 23:29:34.275" endtime="20220319 23:29:34.296"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${fav_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:34.297" level="INFO">Clicking element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-outlined")]'.</msg>
+<status status="PASS" starttime="20220319 23:29:34.297" endtime="20220319 23:29:34.363"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:36.364" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:34.364" endtime="20220319 23:29:36.364"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${red_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:36.385" level="INFO">Current page contains element '//*[@type="button" and contains (@style, "background-color: red")]'.</msg>
+<status status="PASS" starttime="20220319 23:29:36.364" endtime="20220319 23:29:36.385"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:38.386" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:36.385" endtime="20220319 23:29:38.386"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:32.273" endtime="20220319 23:29:38.387"/>
+</kw>
+<kw name="Click User Avatar and sidebar should appear" library="sidebar_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:29:38.388" endtime="20220319 23:29:38.406"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:38.410" level="INFO">Current page contains element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:38.406" endtime="20220319 23:29:38.410"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:38.411" level="INFO">Clicking element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:38.410" endtime="20220319 23:29:38.443"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:40.444" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:38.444" endtime="20220319 23:29:40.444"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${sb}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:40.467" level="INFO">Current page contains element '//*[@class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorRight MuiPaper-elevation16"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:40.445" endtime="20220319 23:29:40.468"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:42.468" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:40.468" endtime="20220319 23:29:42.469"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:38.387" endtime="20220319 23:29:42.469"/>
+</kw>
+<kw name="Check added coin in the favourite list" library="sidebar_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@class="MuiDrawer-root MuiDrawer-modal"]/div[3]/div/div[2]/div/div[2]/span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:42.489" level="INFO">Current page contains element '//*[@class="MuiDrawer-root MuiDrawer-modal"]/div[3]/div/div[2]/div/div[2]/span'.</msg>
+<status status="PASS" starttime="20220319 23:29:42.470" endtime="20220319 23:29:42.489"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${trash_icn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:42.498" level="INFO">Current page contains element '//*[@d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:42.489" endtime="20220319 23:29:42.498"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:44.498" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:42.498" endtime="20220319 23:29:44.498"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:42.469" endtime="20220319 23:29:44.499"/>
+</kw>
+<kw name="Click trash icon to remove favourite" library="sidebar_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${trash_icn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:44.511" level="INFO">Current page contains element '//*[@d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:44.500" endtime="20220319 23:29:44.512"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${trash_icn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:44.512" level="INFO">Clicking element '//*[@d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:44.512" endtime="20220319 23:29:44.563"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:46.564" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:44.563" endtime="20220319 23:29:46.564"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:44.499" endtime="20220319 23:29:46.564"/>
+</kw>
+<kw name="Click logout and check header component" library="sidebar_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${logout_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:46.577" level="INFO">Current page contains element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained")]'.</msg>
+<status status="PASS" starttime="20220319 23:29:46.565" endtime="20220319 23:29:46.577"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logout_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:46.577" level="INFO">Clicking element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained")]'.</msg>
+<status status="PASS" starttime="20220319 23:29:46.577" endtime="20220319 23:29:46.626"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:48.626" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:46.626" endtime="20220319 23:29:48.626"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:29:48.627" endtime="20220319 23:29:48.651"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220319 23:29:48.664" level="INFO">Current page does not contain element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:29:48.651" endtime="20220319 23:29:48.664"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${currency_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:48.671" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[1]'.</msg>
+<status status="PASS" starttime="20220319 23:29:48.664" endtime="20220319 23:29:48.672"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:29:48.681" level="INFO">Current page contains element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[2]'.</msg>
+<status status="PASS" starttime="20220319 23:29:48.672" endtime="20220319 23:29:48.681"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:46.564" endtime="20220319 23:29:48.681"/>
+</kw>
+<status status="PASS" starttime="20220319 23:28:43.172" endtime="20220319 23:29:48.681"/>
+</test>
+<test id="s1-t6" name="Integration Testing - Homepage Component">
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:50.682" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:48.682" endtime="20220319 23:29:50.683"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:29:50.684" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:29:50.683" endtime="20220319 23:29:50.691"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:52.693" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:50.692" endtime="20220319 23:29:52.693"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:29:52.693" endtime="20220319 23:29:52.702"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:52.702" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:29:52.702" endtime="20220319 23:29:52.790"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:29:52.794" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:29:52.791" endtime="20220319 23:29:52.794"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:54.795" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:52.794" endtime="20220319 23:29:54.795"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:48.682" endtime="20220319 23:29:54.796"/>
+</kw>
+<kw name="Click the coin in the table and navigate to respective coin page from homepage" library="homepage_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:56.797" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:54.796" endtime="20220319 23:29:56.797"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:29:56.798" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:29:56.797" endtime="20220319 23:29:56.810"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:29:58.811" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:56.811" endtime="20220319 23:29:58.811"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${table_row1_hp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:29:58.812" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[1]/div[2]/div[2]/div[2]/table/tbody/tr[1]'.</msg>
+<status status="PASS" starttime="20220319 23:29:58.812" endtime="20220319 23:29:58.859"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:00.860" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:29:58.859" endtime="20220319 23:30:00.860"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/coins/bitcoin</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:30:00.869" level="INFO">Current location is 'https://cryptonite5.netlify.app/coins/bitcoin'.</msg>
+<status status="PASS" starttime="20220319 23:30:00.860" endtime="20220319 23:30:00.869"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:05.870" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:00.870" endtime="20220319 23:30:05.871"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:54.796" endtime="20220319 23:30:05.871"/>
+</kw>
+<status status="PASS" starttime="20220319 23:29:48.681" endtime="20220319 23:30:05.871"/>
+</test>
+<test id="s1-t7" name="Integration Testing - Crypto Page Component">
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:07.874" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:05.873" endtime="20220319 23:30:07.874"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:30:07.875" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:30:07.875" endtime="20220319 23:30:07.886"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:09.886" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:07.886" endtime="20220319 23:30:09.887"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:30:09.887" endtime="20220319 23:30:09.907"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:09.908" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:30:09.907" endtime="20220319 23:30:10.004"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:30:10.047" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:30:10.004" endtime="20220319 23:30:10.047"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:12.048" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:10.047" endtime="20220319 23:30:12.048"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:05.873" endtime="20220319 23:30:12.048"/>
+</kw>
+<kw name="Click on the Crypto text and Navigate to Crypto Page" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:30:12.049" endtime="20220319 23:30:12.063"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${crypto_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:12.064" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/h6[1]'.</msg>
+<status status="PASS" starttime="20220319 23:30:12.063" endtime="20220319 23:30:12.167"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/crypto</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:30:12.207" level="INFO">Current location is 'https://cryptonite5.netlify.app/crypto'.</msg>
+<status status="PASS" starttime="20220319 23:30:12.167" endtime="20220319 23:30:12.207"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:14.207" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:12.207" endtime="20220319 23:30:14.208"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:12.049" endtime="20220319 23:30:14.208"/>
+</kw>
+<kw name="Click the coin in the table and navigate to respective coin page from Crypto" library="crypto_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:16.210" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:14.209" endtime="20220319 23:30:16.210"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:30:16.211" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:30:16.210" endtime="20220319 23:30:16.219"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:18.220" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:16.220" endtime="20220319 23:30:18.221"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${table_row1_cr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:18.221" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[1]/div[3]/div[2]/table/tbody/tr[1]/th/div[2]/span[1]'.</msg>
+<status status="PASS" starttime="20220319 23:30:18.221" endtime="20220319 23:30:18.310"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:20.311" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:18.311" endtime="20220319 23:30:20.312"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/coins/bitcoin</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:30:20.323" level="INFO">Current location is 'https://cryptonite5.netlify.app/coins/bitcoin'.</msg>
+<status status="PASS" starttime="20220319 23:30:20.312" endtime="20220319 23:30:20.323"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:25.324" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:20.323" endtime="20220319 23:30:25.324"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:14.208" endtime="20220319 23:30:25.324"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:05.872" endtime="20220319 23:30:25.324"/>
+</test>
+<test id="s1-t8" name="Integration Testing - Coin Page Component">
+<kw name="Return to Homepage" library="header_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:27.325" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:25.325" endtime="20220319 23:30:27.325"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:30:27.327" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:30:27.326" endtime="20220319 23:30:27.338"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:29.339" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:27.338" endtime="20220319 23:30:29.339"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:30:29.339" endtime="20220319 23:30:29.359"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:29.360" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/img'.</msg>
+<status status="PASS" starttime="20220319 23:30:29.359" endtime="20220319 23:30:29.464"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:30:29.469" level="INFO">Current location is 'https://cryptonite5.netlify.app/'.</msg>
+<status status="PASS" starttime="20220319 23:30:29.464" endtime="20220319 23:30:29.469"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:31.469" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:29.469" endtime="20220319 23:30:31.470"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:25.325" endtime="20220319 23:30:31.470"/>
+</kw>
+<kw name="Click on the Crypto text and Navigate to Crypto Page" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:30:31.470" endtime="20220319 23:30:31.482"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${crypto_header}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:31.482" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/h6[1]'.</msg>
+<status status="PASS" starttime="20220319 23:30:31.482" endtime="20220319 23:30:31.574"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/crypto</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:30:31.617" level="INFO">Current location is 'https://cryptonite5.netlify.app/crypto'.</msg>
+<status status="PASS" starttime="20220319 23:30:31.574" endtime="20220319 23:30:31.617"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:33.618" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:31.617" endtime="20220319 23:30:33.618"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:31.470" endtime="20220319 23:30:33.618"/>
+</kw>
+<kw name="Click the coin in the table and navigate to respective coin page from Crypto" library="crypto_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:35.620" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:33.619" endtime="20220319 23:30:35.620"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220319 23:30:35.621" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220319 23:30:35.620" endtime="20220319 23:30:35.627"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:37.628" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:35.627" endtime="20220319 23:30:37.628"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${table_row1_cr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:37.629" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[1]/div[3]/div[2]/table/tbody/tr[1]/th/div[2]/span[1]'.</msg>
+<status status="PASS" starttime="20220319 23:30:37.628" endtime="20220319 23:30:37.710"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:39.711" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:37.711" endtime="20220319 23:30:39.711"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://cryptonite5.netlify.app/coins/bitcoin</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220319 23:30:39.724" level="INFO">Current location is 'https://cryptonite5.netlify.app/coins/bitcoin'.</msg>
+<status status="PASS" starttime="20220319 23:30:39.712" endtime="20220319 23:30:39.724"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:44.725" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:39.724" endtime="20220319 23:30:44.725"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:33.619" endtime="20220319 23:30:44.725"/>
+</kw>
+<kw name="Not logged in and check page component" library="coin_test">
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>${fav_btn}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220319 23:30:44.740" level="INFO">Current page does not contain element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-outlined")]'.</msg>
+<status status="PASS" starttime="20220319 23:30:44.726" endtime="20220319 23:30:44.741"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:44.725" endtime="20220319 23:30:44.741"/>
+</kw>
+<kw name="Click on the login button" library="header_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:30:44.741" endtime="20220319 23:30:44.749"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:44.750" level="INFO">Clicking element '//*[@id="root"]/div[2]/div/header/div/div/div/div/div[1]/button[2]'.</msg>
+<status status="PASS" starttime="20220319 23:30:44.749" endtime="20220319 23:30:44.823"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:46.823" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:44.823" endtime="20220319 23:30:46.823"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${log_sign_tab}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:30:46.824" endtime="20220319 23:30:46.843"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${log_sign_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:30:46.851" level="INFO">Current page contains element '//*[@class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"]'.</msg>
+<status status="PASS" starttime="20220319 23:30:46.844" endtime="20220319 23:30:46.851"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:48.852" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:46.851" endtime="20220319 23:30:48.852"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:44.741" endtime="20220319 23:30:48.853"/>
+</kw>
+<kw name="Click on the login tab" library="header_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:30:48.866" level="INFO">Current page contains element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:30:48.853" endtime="20220319 23:30:48.866"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:48.867" level="INFO">Clicking element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:30:48.866" endtime="20220319 23:30:48.911"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:50.913" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:48.912" endtime="20220319 23:30:50.914"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Enter Email"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:30:50.936" level="INFO">Current page contains element '//*[text()="Enter Email"]'.</msg>
+<status status="PASS" starttime="20220319 23:30:50.914" endtime="20220319 23:30:50.936"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Enter Your Password"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:30:50.950" level="INFO">Current page contains element '//*[text()="Enter Your Password"]'.</msg>
+<status status="PASS" starttime="20220319 23:30:50.936" endtime="20220319 23:30:50.950"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[text()="Login" and contains (@class, "MuiButton-label")] //parent::button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:30:50.958" level="INFO">Current page contains element '//*[text()="Login" and contains (@class, "MuiButton-label")] //parent::button'.</msg>
+<status status="PASS" starttime="20220319 23:30:50.950" endtime="20220319 23:30:50.958"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:52.959" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:50.958" endtime="20220319 23:30:52.959"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:48.853" endtime="20220319 23:30:52.959"/>
+</kw>
+<kw name="Login Account" library="sidebar_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:30:52.968" level="INFO">Current page contains element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:30:52.960" endtime="20220319 23:30:52.969"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${log_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:52.969" level="INFO">Clicking element '//*[text()="Login" and contains (@class, "MuiTab-wrapper")]'.</msg>
+<status status="PASS" starttime="20220319 23:30:52.969" endtime="20220319 23:30:53.001"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:53.001" level="INFO">Clicking element '//*[@type="email" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:30:53.001" endtime="20220319 23:30:53.053"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<arg>${test_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:53.053" level="INFO">Typing text 'emailtest@test.com.my' into text field '//*[@type="email" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:30:53.053" endtime="20220319 23:30:53.130"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pswd_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:53.130" level="INFO">Clicking element '//*[@type="password" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:30:53.130" endtime="20220319 23:30:53.170"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pswd_field}</arg>
+<arg>${test_pswd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:53.170" level="INFO">Typing text 'abc123' into text field '//*[@type="password" and contains (@class, "MuiInputBase-input MuiFilledInput-input")]'.</msg>
+<status status="PASS" starttime="20220319 23:30:53.170" endtime="20220319 23:30:53.217"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:30:55.217" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:53.217" endtime="20220319 23:30:55.217"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_btn_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:30:55.218" level="INFO">Clicking element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSizeLarge MuiButton-sizeLarge")]'.</msg>
+<status status="PASS" starttime="20220319 23:30:55.218" endtime="20220319 23:30:55.270"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:00.271" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220319 23:30:55.270" endtime="20220319 23:31:00.271"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:52.959" endtime="20220319 23:31:00.271"/>
+</kw>
+<kw name="Logged in and check page component" library="coin_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${fav_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:00.283" level="INFO">Current page contains element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-outlined")]'.</msg>
+<status status="PASS" starttime="20220319 23:31:00.272" endtime="20220319 23:31:00.283"/>
+</kw>
+<status status="PASS" starttime="20220319 23:31:00.272" endtime="20220319 23:31:00.283"/>
+</kw>
+<kw name="Click Add to Favourite button and check the component" library="coin_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:02.284" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:00.284" endtime="20220319 23:31:02.284"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${green_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:02.294" level="INFO">Current page contains element '//*[@type="button" and contains (@style, "background-color: rgb(73, 255, 0)")]'.</msg>
+<status status="PASS" starttime="20220319 23:31:02.285" endtime="20220319 23:31:02.294"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${fav_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:31:02.295" level="INFO">Clicking element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-outlined")]'.</msg>
+<status status="PASS" starttime="20220319 23:31:02.294" endtime="20220319 23:31:02.344"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:04.345" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:02.344" endtime="20220319 23:31:04.345"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${red_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:04.356" level="INFO">Current page contains element '//*[@type="button" and contains (@style, "background-color: red")]'.</msg>
+<status status="PASS" starttime="20220319 23:31:04.345" endtime="20220319 23:31:04.357"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:06.357" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:04.357" endtime="20220319 23:31:06.357"/>
+</kw>
+<status status="PASS" starttime="20220319 23:31:00.284" endtime="20220319 23:31:06.358"/>
+</kw>
+<kw name="Click User Avatar and sidebar should appear" library="sidebar_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:31:06.358" endtime="20220319 23:31:06.379"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:06.390" level="INFO">Current page contains element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:31:06.379" endtime="20220319 23:31:06.390"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:31:06.391" level="INFO">Clicking element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:31:06.390" endtime="20220319 23:31:06.443"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:08.444" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:06.443" endtime="20220319 23:31:08.444"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${sb}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:08.468" level="INFO">Current page contains element '//*[@class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorRight MuiPaper-elevation16"]'.</msg>
+<status status="PASS" starttime="20220319 23:31:08.444" endtime="20220319 23:31:08.468"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:10.469" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:08.469" endtime="20220319 23:31:10.469"/>
+</kw>
+<status status="PASS" starttime="20220319 23:31:06.358" endtime="20220319 23:31:10.470"/>
+</kw>
+<kw name="Check added coin in the favourite list" library="sidebar_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@class="MuiDrawer-root MuiDrawer-modal"]/div[3]/div/div[2]/div/div[2]/span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:10.490" level="INFO">Current page contains element '//*[@class="MuiDrawer-root MuiDrawer-modal"]/div[3]/div/div[2]/div/div[2]/span'.</msg>
+<status status="PASS" starttime="20220319 23:31:10.470" endtime="20220319 23:31:10.490"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${trash_icn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:10.512" level="INFO">Current page contains element '//*[@d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"]'.</msg>
+<status status="PASS" starttime="20220319 23:31:10.490" endtime="20220319 23:31:10.512"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:12.513" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:10.512" endtime="20220319 23:31:12.513"/>
+</kw>
+<status status="PASS" starttime="20220319 23:31:10.470" endtime="20220319 23:31:12.513"/>
+</kw>
+<kw name="Close sidebar" library="sidebar_test">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${backdrop_sb}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:31:12.515" level="INFO">Clicking element '//*[@class="MuiBackdrop-root"]'.</msg>
+<status status="PASS" starttime="20220319 23:31:12.514" endtime="20220319 23:31:12.559"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:14.560" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:12.559" endtime="20220319 23:31:14.560"/>
+</kw>
+<status status="PASS" starttime="20220319 23:31:12.513" endtime="20220319 23:31:14.560"/>
+</kw>
+<kw name="Logged in and check page component" library="coin_test">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${fav_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:14.583" level="INFO">Current page contains element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-outlined")]'.</msg>
+<status status="PASS" starttime="20220319 23:31:14.561" endtime="20220319 23:31:14.583"/>
+</kw>
+<status status="PASS" starttime="20220319 23:31:14.561" endtime="20220319 23:31:14.583"/>
+</kw>
+<kw name="Click Remove from Favourite button and check the component" library="coin_test">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:16.584" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:14.583" endtime="20220319 23:31:16.584"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${red_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:16.604" level="INFO">Current page contains element '//*[@type="button" and contains (@style, "background-color: red")]'.</msg>
+<status status="PASS" starttime="20220319 23:31:16.584" endtime="20220319 23:31:16.604"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${fav_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:31:16.604" level="INFO">Clicking element '//*[@type="button" and contains (@class, "MuiButtonBase-root MuiButton-root MuiButton-outlined")]'.</msg>
+<status status="PASS" starttime="20220319 23:31:16.604" endtime="20220319 23:31:16.655"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:18.656" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:16.656" endtime="20220319 23:31:18.656"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${green_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:18.679" level="INFO">Current page contains element '//*[@type="button" and contains (@style, "background-color: rgb(73, 255, 0)")]'.</msg>
+<status status="PASS" starttime="20220319 23:31:18.657" endtime="20220319 23:31:18.679"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:20.680" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:18.679" endtime="20220319 23:31:20.680"/>
+</kw>
+<status status="PASS" starttime="20220319 23:31:14.583" endtime="20220319 23:31:20.680"/>
+</kw>
+<kw name="Click User Avatar and sidebar should appear" library="sidebar_test">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220319 23:31:20.682" endtime="20220319 23:31:20.698"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:20.707" level="INFO">Current page contains element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:31:20.698" endtime="20220319 23:31:20.708"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${avatar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 23:31:20.708" level="INFO">Clicking element '//*[@class="MuiSvgIcon-root MuiAvatar-fallback"]'.</msg>
+<status status="PASS" starttime="20220319 23:31:20.708" endtime="20220319 23:31:20.749"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:22.750" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:20.749" endtime="20220319 23:31:22.750"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${sb}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220319 23:31:22.772" level="INFO">Current page contains element '//*[@class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorRight MuiPaper-elevation16"]'.</msg>
+<status status="PASS" starttime="20220319 23:31:22.750" endtime="20220319 23:31:22.772"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:24.772" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:22.772" endtime="20220319 23:31:24.773"/>
+</kw>
+<status status="PASS" starttime="20220319 23:31:20.681" endtime="20220319 23:31:24.773"/>
+</kw>
+<kw name="Check removed coin in the favourite list" library="sidebar_test">
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//*[@class="MuiDrawer-root MuiDrawer-modal"]/div[3]/div/div[2]/div/div[2]/span</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220319 23:31:24.796" level="INFO">Current page does not contain element '//*[@class="MuiDrawer-root MuiDrawer-modal"]/div[3]/div/div[2]/div/div[2]/span'.</msg>
+<status status="PASS" starttime="20220319 23:31:24.774" endtime="20220319 23:31:24.796"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>${trash_icn}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220319 23:31:24.807" level="INFO">Current page does not contain element '//*[@d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"]'.</msg>
+<status status="PASS" starttime="20220319 23:31:24.796" endtime="20220319 23:31:24.807"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220319 23:31:26.807" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220319 23:31:24.807" endtime="20220319 23:31:26.808"/>
+</kw>
+<status status="PASS" starttime="20220319 23:31:24.773" endtime="20220319 23:31:26.808"/>
+</kw>
+<status status="PASS" starttime="20220319 23:30:25.324" endtime="20220319 23:31:26.808"/>
+</test>
+<test id="s1-t9" name="Close Website">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220319 23:31:26.810" endtime="20220319 23:31:26.872"/>
+</kw>
+<status status="PASS" starttime="20220319 23:31:26.809" endtime="20220319 23:31:26.872"/>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20220319 23:25:19.946" endtime="20220319 23:31:26.873"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="Integration">Integration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
