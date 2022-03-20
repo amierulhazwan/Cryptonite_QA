@@ -25,8 +25,8 @@ Click on the third Conquer the Market button
     location should be                      https://cryptonite5.netlify.app/
     sleep                                   2
 
-## Below Test Cases are for this particular page Component Testing -----------------------------------------------------
-## Uncomment Test to test the component --------------------------------------------------------------------------------
+# Below Test Cases are for this particular page Component Testing -----------------------------------------------------
+# Uncomment Test to test the component --------------------------------------------------------------------------------
 
 #*** Test Cases ***
 #Open Website

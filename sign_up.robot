@@ -309,8 +309,8 @@ Sign Up Tab - Click sign-up btn
     page should contain element                     ${sign_btn_tab}
     click element                                   ${sign_btn_tab}
 
-## Below Test Cases are for this particular page Component Testing -----------------------------------------------------
-## Uncomment Test to test the component --------------------------------------------------------------------------------
+# Below Test Cases are for this particular page Component Testing -----------------------------------------------------
+# Uncomment Test to test the component --------------------------------------------------------------------------------
 
 #*** Test Cases ***
 #Open Website
@@ -398,7 +398,7 @@ Sign Up Tab - Click sign-up btn
 #    Sign Up Tab - Used email input, click sign up
 #    Sign Up Tab - Different password in the confirm field, click sign up
 #    Sign Up Tab - Check for Pswd limit in Pswd Field
-
+#
 #Close Website
 #    Close Browser
 

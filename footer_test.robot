@@ -69,9 +69,9 @@ Click on the Promotional text on the Footer and Navigate to Landing page
     location should be                      https://cryptonite5.netlify.app/landing
     sleep                                   2
 
-## Below Test Cases are for this particular page Component Testing -----------------------------------------------------
-## Uncomment Test to test the component --------------------------------------------------------------------------------
-
+# Below Test Cases are for this particular page Component Testing -----------------------------------------------------
+# Uncomment Test to test the component --------------------------------------------------------------------------------
+#
 #*** Test Cases ***
 #Open Website
 #    Open Browser        https://cryptonite5.netlify.app/  chrome

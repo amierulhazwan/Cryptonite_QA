@@ -226,6 +226,7 @@ Login Tab - Click login btn
     page should contain element                     ${login_btn_tab}
     click element                                   ${login_btn_tab}
 
+# Below Test Cases are for this particular page Component Testing -----------------------------------------------------
 # Uncomment Test to test the component ---------------------------------------------------------------------------------
 #*** Test Cases ***
 #Open Website

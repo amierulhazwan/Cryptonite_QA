@@ -27,8 +27,8 @@ Click Remove from Favourite button and check the component
     page should contain element             ${green_btn}
     sleep                                   2
 
-## Below Test Cases are for this particular page Component Testing -----------------------------------------------------
-## Uncomment Test to test the component --------------------------------------------------------------------------------
+# Below Test Cases are for this particular page Component Testing -----------------------------------------------------
+# Uncomment Test to test the component --------------------------------------------------------------------------------
 
 #*** Test Cases ***
 #Open Website

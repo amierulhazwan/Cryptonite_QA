@@ -89,8 +89,8 @@ Check for valid input from page 2 Crypto Table
     textfield should contain                        ${search_field}           POLKADOT
     page should contain element                     //*[@class="MuiTableContainer-root" and contains (text(),POLKADOT)]
 
-## Below Test Cases are for this particular page Component Testing -----------------------------------------------------
-## Uncomment Test to test the component --------------------------------------------------------------------------------
+# Below Test Cases are for this particular page Component Testing -----------------------------------------------------
+# Uncomment Test to test the component --------------------------------------------------------------------------------
 
 #*** Test Cases ***
 #Open Website

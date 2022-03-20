@@ -14,8 +14,8 @@ Click the coin in the table and navigate to respective coin page from homepage
     location should be                              https://cryptonite5.netlify.app/coins/bitcoin
     sleep                                           5
 
-## Below Test Cases are for this particular page Component Testing -----------------------------------------------------
-## Uncomment Test to test the component --------------------------------------------------------------------------------
+# Below Test Cases are for this particular page Component Testing -----------------------------------------------------
+# Uncomment Test to test the component --------------------------------------------------------------------------------
 
 #*** Test Cases ***
 #Open Website

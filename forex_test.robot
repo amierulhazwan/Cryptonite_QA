@@ -21,8 +21,8 @@ Click one of the Forex pair and check component
     sleep                                   2
     page should not contain element         ${forex_tab_dd}
 
-## Below Test Cases are for this particular page Component Testing -----------------------------------------------------
-## Uncomment Test to test the component --------------------------------------------------------------------------------
+# Below Test Cases are for this particular page Component Testing -----------------------------------------------------
+# Uncomment Test to test the component --------------------------------------------------------------------------------
 
 #*** Test Cases ***
 #Open Website
@@ -36,7 +36,7 @@ Click one of the Forex pair and check component
 #    Click one of the Forex pair and check component
 #Close Website
 #    Close Browser
-#
+
 
 
 
