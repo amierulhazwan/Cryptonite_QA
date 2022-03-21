@@ -305,57 +305,57 @@ Rating clicked and no input, click submit
 
 # Below Test Cases are for this particular page Component Testing -----------------------------------------------------
 # Uncomment Test to test the component --------------------------------------------------------------------------------
-
-*** Test Cases ***
-Open Website
-    Open Browser                            https://cryptonite5.netlify.app/  chrome
-    maximize browser window
-Help Page Test
-    Check header component
-    Return to Homepage
-    Click on the Crypto text and Navigate to Help Page
-Dropdown Component Test
-    Click the dropdown button, click again to close
-    Click more than one dropdown button, click again to close
-First Rating Component Test
-    Scroll to Feedback section
-    Click the first rating component from rate 1 to rate 5
-    Click the first rating component again to unrate
-Second Rating Component Test
-    Click the second rating component from rate 1 to rate 5
-    Click the second rating component again to unrate
-Like/Dislike Component
-    Scroll to Feedback section
-    Click thumbs up, color to green
-    Click thumbs up again, color default
-    Click thumbs down, color to red
-    Click thumbs down again, color default
-    Scroll to Top
-Textfield Component
-    Scroll to Textfield section
-    Valid feedback input
-    Check Delete button f(x) - text field
-    Valid feedback input
-    Check Backspace button f(x) - text field
-    Valid feedback input
-    Check Copy f(x) - text field
-    Clear text field
-    Check Paste f(x) - text field
-    Clear text field
-
-    Check for numeric character in text field
-    Clear text field
-    Check for alpha & numeric character in text field
-    Clear text field
-    Check for uppercase alphabet in text field
-    Clear text field
-    Check for lowercase alphabet in text field
-    Clear text field
-    Check for uppercase & lowercase alphabet in text field
-    Clear text field
-Feedback Submit Flow Test
-    Rating clicked and valid input, click submit
-    No rating and valid input, click submit
-    Rating clicked and no input, click submit
-Close Website
-    Close Browser
+#
+#*** Test Cases ***
+#Open Website
+#    Open Browser                            https://cryptonite5.netlify.app/  chrome
+#    maximize browser window
+#Help Page Test
+#    Check header component
+#    Return to Homepage
+#    Click on the Crypto text and Navigate to Help Page
+#Dropdown Component Test
+#    Click the dropdown button, click again to close
+#    Click more than one dropdown button, click again to close
+#First Rating Component Test
+#    Scroll to Feedback section
+#    Click the first rating component from rate 1 to rate 5
+#    Click the first rating component again to unrate
+#Second Rating Component Test
+#    Click the second rating component from rate 1 to rate 5
+#    Click the second rating component again to unrate
+#Like/Dislike Component
+#    Scroll to Feedback section
+#    Click thumbs up, color to green
+#    Click thumbs up again, color default
+#    Click thumbs down, color to red
+#    Click thumbs down again, color default
+#    Scroll to Top
+#Textfield Component
+#    Scroll to Textfield section
+#    Valid feedback input
+#    Check Delete button f(x) - text field
+#    Valid feedback input
+#    Check Backspace button f(x) - text field
+#    Valid feedback input
+#    Check Copy f(x) - text field
+#    Clear text field
+#    Check Paste f(x) - text field
+#    Clear text field
+#
+#    Check for numeric character in text field
+#    Clear text field
+#    Check for alpha & numeric character in text field
+#    Clear text field
+#    Check for uppercase alphabet in text field
+#    Clear text field
+#    Check for lowercase alphabet in text field
+#    Clear text field
+#    Check for uppercase & lowercase alphabet in text field
+#    Clear text field
+#Feedback Submit Flow Test
+#    Rating clicked and valid input, click submit
+#    No rating and valid input, click submit
+#    Rating clicked and no input, click submit
+#Close Website
+#    Close Browser
